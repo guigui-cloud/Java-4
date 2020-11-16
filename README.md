@@ -13,20 +13,47 @@ Java课程作业仓库4
 -----------------------------------------------------------
 ## 核心方法
 接口中的方法：
-1. 学生接口中创建的两个方法，分别实现$\color{red}{查学费}$和$\color{bule}{交学费}$
+> 1. 学生接口中创建的两个方法，分别实现**查学费**和**交学费**
 ```java
 public interface Studentjiekou {
-	double jiaxuefei();
-	void chaxuefei(double xuefei);
+	double jiaxuefei();  //交学费
+	void chaxuefei(double xuefei);  //查学费
 
 }
 ```
-2. 助教接口(Teacherjiekou)同样也创建两个方法，分别实现查薪资和发放薪水
+> 2. 助教接口(Teacherjiekou)同样也创建两个方法，分别实现**查薪资**和**发放薪水**
 ```java
 public interface Teacherjiekou {
-	double faxinshui();
-	void chaxinshui(double xinshui);
+	double faxinshui();  //发薪水
+	void chaxinshui(double xinshui);  //查薪资
 
 }
 ```
-3. 
+> 3. 博士研究生类中将实现以上两个接口
+>> 创建构造方法：
+```java
+public Boshiyanjiusheng(String XueShengName,String Sex,int Age) {
+		name = XueShengName;
+		sex = Sex;
+		age = Age;
+	}
+```
+>> 重写接口方法（这里只写出学生接口的重写，助教接口同）：
+```java
+	public double jiaxuefei() {
+		return meixueqixuefei;
+		
+	}
+	
+	public void chaxuefei(double xuefei) {
+		meixueqixuefei = xuefei;
+		
+	}
+```
+>> 计算年薪：
+```java
+public double JiSuanNianShouRu() {
+		NianXin = 12*meiyuexinshui;
+		return NianXin;
+	}
+```
