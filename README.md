@@ -57,3 +57,24 @@ public double JiSuanNianShouRu() {
 		return NianXin;
 	}
 ```
+
+## 测试主类（CeShiYong）
+在编写这个类之前，先去查找了一下国家最新的工资纳税标准，如下图：
+![工资纳税标准](http://t.860816.com/uploads/allimg/180920/1-1P9201S1231B.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
