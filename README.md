@@ -61,10 +61,55 @@ public double JiSuanNianShouRu() {
 ## 测试主类（CeShiYong）
 在编写这个类之前，先去查找了一下国家最新的工资纳税标准，如下图：
 ![工资纳税标准](http://t.860816.com/uploads/allimg/180920/1-1P9201S1231B.jpg)
-
-
-
-
+-------------------------------------------------------------------------------
+根据图片，将税率分别定义为：
+```java
+final static double ShuiLv1 = 0.03,ShuiLv2 = 0.1,ShuiLv3 = 0.2,ShuiLv4 = 0.25,ShuiLv5 = 0.3,ShuiLv6 = 0.35,ShuiLv = 0.45;
+//ShuiLv1等等按图中从上到下排列
+```
+通过Scanner来实现交互式输入的时候，会遇到判断输入内容的情况，若是编写如下图所示的代码，将不会进行判断而是直接走else的结果
+```java
+·······
+Scanner in = new Scanner(System.in);
+		String name = in.next();
+		
+		if(name == "谢宇翔") {
+·······
+}
+·······
+```
+后面发现在判断字符串的时候应该使用.equals()比较，这样能避免上面那种情况的发生，如下：
+```java
+Scanner in = new Scanner(System.in);
+		String name = in.next();
+		
+		if("谢宇翔".equals(name)) {
+			Boshiyanjiusheng Boshi1 = new Boshiyanjiusheng("谢宇翔","男",19);
+			Boshi1.chaxuefei(10000);
+			Boshi1.jiaxuefei();
+			Boshi1.chaxinshui(5000);
+			Boshi1.faxinshui();
+			Boshi1.JiSuanNianShouRu();
+			Boshi1.YingJiaoShui = 3000 * ShuiLv1 + (Boshi1.meiyuexinshui-3000) * ShuiLv2 - 210;
+			System.out.println("姓名："+Boshi1.name);
+			System.out.println("性别："+Boshi1.sex);
+			System.out.println("年龄："+Boshi1.age);
+			System.out.println("每学期学费："+Boshi1.meixueqixuefei);
+			System.out.println("年薪："+Boshi1.NianXin);
+			System.out.println("每月应交税："+Boshi1.YingJiaoShui);
+			System.out.println('\n');
+		}
+```
+运行结果：
+```
+谢宇翔
+姓名：谢宇翔
+性别：男
+年龄：19
+每学期学费：10000.0
+年薪：60000.0
+每月应交税：80.0
+```
 
 
 
