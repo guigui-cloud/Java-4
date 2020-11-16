@@ -13,7 +13,7 @@ Java课程作业仓库4
 -----------------------------------------------------------
 ## 核心方法
 接口中的方法：
-> 1. 学生接口中创建的两个方法，分别实现**查学费**和**交学费**
+> 学生接口中创建的两个方法，分别实现**查学费**和**交学费**
 ```java
 public interface Studentjiekou {
 	double jiaxuefei();  //交学费
@@ -21,7 +21,7 @@ public interface Studentjiekou {
 
 }
 ```
-> 2. 助教接口(Teacherjiekou)同样也创建两个方法，分别实现**查薪资**和**发放薪水**
+> 助教接口(Teacherjiekou)同样也创建两个方法，分别实现**查薪资**和**发放薪水**
 ```java
 public interface Teacherjiekou {
 	double faxinshui();  //发薪水
@@ -29,7 +29,7 @@ public interface Teacherjiekou {
 
 }
 ```
-> 3. 博士研究生类中将实现以上两个接口
+> 博士研究生类中将实现以上两个接口
 >> 创建构造方法：
 ```java
 public Boshiyanjiusheng(String XueShengName,String Sex,int Age) {
@@ -100,9 +100,8 @@ Scanner in = new Scanner(System.in);
 			System.out.println('\n');
 		}
 ```
-运行结果：
+## 运行结果(输入"谢宇翔")：
 ```
-谢宇翔
 姓名：谢宇翔
 性别：男
 年龄：19
@@ -110,6 +109,14 @@ Scanner in = new Scanner(System.in);
 年薪：60000.0
 每月应交税：80.0
 ```
+## 实验感想
+> 这次并没有使用异常类，因为我还不太明白这个(/▽＼)，后面会尝试添加进去
+> 最大的收获是知道了:
+1. Scanner类在输入了int类型后接着输入String类型的数据时出错的解决方案
+[解决方法](https://bigsai.blog.csdn.net/article/details/79734456?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.add_param_isCf&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.add_param_isCf)
+2. 比较字符串时应该使用.equals()进行比较
+[if语句可以用来比较字符串内容吗？](https://bbs.csdn.net/topics/392691584)
+
 
 
 
