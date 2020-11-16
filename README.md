@@ -21,3 +21,12 @@ public interface Studentjiekou {
 
 }
 ```
+2. 助教接口(Teacherjiekou)同样也创建两个方法，分别实现查薪资和发放薪水
+```java
+public interface Teacherjiekou {
+	double faxinshui();
+	void chaxinshui(double xinshui);
+
+}
+```
+3. 
